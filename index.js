@@ -49,7 +49,7 @@ app.post("/webhook", async (req, res) => {
       }
 
      await axios.post(
-  https://graph.facebook.com/v22.0/${process.env.PHONE_NUMBER_ID}/messages,
+  `https://graph.facebook.com/v22.0/${process.env.PHONE_NUMBER_ID}/messages`,
   {
     messaging_product: "whatsapp",
     to: from,
@@ -59,7 +59,7 @@ app.post("/webhook", async (req, res) => {
   },
   {
     headers: {
-      Authorization: Bearer ${process.env.WHATSAPP_TOKEN},
+      Authorization: `Bearer ${process.env.WHATSAPP_TOKEN}`,
       "Content-Type": "application/json",
     },
   }
