@@ -8,7 +8,7 @@ app.use(express.json());
 const PORT = process.env.PORT || 3000;
 
 const VERIFY_TOKEN = process.env.VERIFY_TOKEN;
-const ACCESS_TOKEN = process.env.ACCESS_TOKEN;
+const WHATSAPP_TOKEN = process.env.ACCESS_TOKEN;
 
 app.get("/webhook", (req, res) => {
     const mode = req.query["hub.mode"];
