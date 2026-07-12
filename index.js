@@ -11,6 +11,7 @@ const VERIFY_TOKEN = process.env.VERIFY_TOKEN;
 const WHATSAPP_TOKEN = process.env.ACCESS_TOKEN;
 
 app.get("/webhook", (req, res) => {
+    console.log("Webhook received:", JSON.stringify(req.body, null, 2));
     const mode = req.query["hub.mode"];
     const token = req.query["hub.verify_token"];
     const challenge = req.query["hub.challenge"];
